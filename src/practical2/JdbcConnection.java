@@ -1,4 +1,4 @@
-package employee2;
+package practical2;
 
 import java.sql.Connection; 
 import java.sql.DriverManager;
