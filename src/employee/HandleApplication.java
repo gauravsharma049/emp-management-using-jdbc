@@ -6,11 +6,19 @@ public class HandleApplication {
 	private Scanner sc = new Scanner(System.in);
 	private EmployeeService employeeService = new EmployeeService();
 	public HandleApplication() {
-		executeApplication();
+		for(int i=0; i>=0; i++) {
+			executeApplication();
+			try {
+				Thread.sleep(2000);
+			}
+			catch(InterruptedException e) {
+				
+			}
+		}
 	}
 	
 	public void executeApplication() {
-		System.out.println("What do you want to perform?");
+		System.out.println("\nWhat do you want to perform?");
 		System.out.println("Enter the corresponding values according to your need...");
 		System.out.println("Add Employee: 1 \nList all employee: 2 \nget employee by id: 3 \nupdate employee: 4 \ndelete employee: 5 \n");
 		
@@ -42,7 +50,7 @@ public class HandleApplication {
 		}
 		
 		
-		sc.close();
+		
 	}
 	
 	public void addEmployee() {

@@ -16,6 +16,7 @@ public class EmployeeService {
 		}
 		catch(Exception e) {
 			System.out.println(e);
+			
 		}
 	}
 	
@@ -30,7 +31,6 @@ public class EmployeeService {
 			stmt.setInt(5, employee.getSalary());
 			
 			stmt.execute();
-			connection.close();
 			System.out.println("employee added successfully");
 			return employee;
 		}
@@ -49,7 +49,6 @@ public class EmployeeService {
 			while(resultSet.next()) {
 				employees.add(new Employee(resultSet.getInt(1), resultSet.getString(2), resultSet.getInt(3), resultSet.getString(4), resultSet.getInt(5)));
 			}
-			connection.close();
 			return employees;
 		}
 		catch(Exception e) {
