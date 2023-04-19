@@ -46,7 +46,7 @@ public class EmployeeCrud {
 	}
 	public static void updateEmployee(Connection connection, int id, Scanner sc) {
 		System.out.println("what do you want to update?");
-		System.out.println("update id : 1 \nupdate name : 2 \nupdate age : 3 \nupdate designation : 4 \nupdate salary : 5\n");
+		System.out.println("update id : 1 \nenter 1 to update name \nenter 2 to update age  \n enter 3 to update designation \nenter 4 to update salary\n");
 		int choice = sc.nextInt();
 		String q="";
 		PreparedStatement stmt=null;
@@ -122,7 +122,7 @@ public class EmployeeCrud {
 		catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
-		System.out.println("retrive employee by id : 1 \nupdate employee by id : 2 \ndelete employee by id : 3\n");
+		System.out.println("enter 1 toretrive employee by id \nenter 2 to update employee by id \nenter 3 delete employee by id \n");
 		int choice = sc.nextInt();
 		switch (choice) {
 		case 1: {
